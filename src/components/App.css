@@ -1,6 +1,14 @@
 .App {
   text-align: center;
 }
+:root {
+  --colPrimary1: #BD1C4E;
+  --colPrimary2: #FFC648;
+  --colSecondary1: white;
+  --colSecondary2: #cf8c37;
+  --colSecondary3: #141414;
+  font-family: 'roboto';
+}
 
 .App-logo {
   height: 40vmin;
