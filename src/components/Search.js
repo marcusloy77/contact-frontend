@@ -6,7 +6,7 @@ const Search = ({ handleContentChange }) => {
       <Form id='search'>
           <Form.Group className="mb-3">
             <Form.Label className='subTitle'>Search</Form.Label>
-            <Form.Control onChange={handleContentChange} type="text" name='searchReq' placeholder="e.g. John" />
+            <Form.Control onChange={handleContentChange} type="text" name='searchReq' placeholder="e.g. John ,0435... etc" />
           </Form.Group>
       </Form>
     </div>
