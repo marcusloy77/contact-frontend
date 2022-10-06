@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './components/App.css';
-import Search from './components/Search'
-import Contacts from './components/Contacts';
+import WebcamCapture from './components/Webcam'
+import Home from './components/Home'
 import ContactPage from './components/ContactPage'
 import { useState, useEffect } from 'react'
 import { Routes, Route, Link, useNavigate } from 'react-router-dom'
@@ -17,7 +17,7 @@ function App() {
 
   const [typedSearch, setTypedSearch] = useState('')
   const [initialContacts, setInitialContacts]= useState([])
-  const [contacts, setContacts] = useState(initialContacts)
+  const [contactList, setContacts] = useState(initialContacts)
   const navigate = useNavigate()
 
   const cleanJson = (json) => {
@@ -59,19 +59,17 @@ function App() {
     setContacts(newContactList)
   }
 
+  const toContactPage = (event) => {
+    const contact = contactList.filter(cont => cont.id == event.target.className)[0]
+    navigate(`/${contact.username}`, {state : contact}) //passing the clicked contact into its page with usenavigate, uselocation hooks
+  }
+
   return (
     <div className="App">
-      <header className='title'>
-        <h1>Contacts</h1>
-        <Search handleContentChange={handleContentChange}></Search>
-      </header>
-      <main>
-        <Contacts contactList={contacts}></Contacts>
-      </main>
-
-
       <Routes>
-        <Route path='/:username' children={<ContactPage></ContactPage>}></Route>
+        <Route path='/' element={<Home handleContentChange={handleContentChange} toContactPage={toContactPage} contactList={contactList}></Home>}></Route>
+        <Route path='/:username' element={<ContactPage></ContactPage>}></Route>
+        <Route path='/webcam' element={<WebcamCapture />}></Route>
       </Routes>
     </div>
   );
