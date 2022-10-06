@@ -1,0 +1,32 @@
+.searchBar {
+  
+  align-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  text-align: center;
+  max-width: 400px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.mb-3 {
+  width: 100% !important;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+}
+
+@media (max-width: 375px){
+  .contacts {
+    display: flex !important;
+    justify-content: left !important;
+    text-align: left;
+    flex-direction: column !important;
+  }
+}

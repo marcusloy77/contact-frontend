@@ -3,12 +3,12 @@ import Button from 'react-bootstrap/Button'
 const Search = ({ handleContentChange }) => {
   return (
     <div className='searchBar'>
-      <Form id='search'>
-          <Form.Group className="mb-3">
+      <div><Form>
+          <Form.Group>
             <Form.Label className='subTitle'>Search</Form.Label>
             <Form.Control onChange={handleContentChange} type="text" name='searchReq' placeholder="e.g. John ,0435... etc" />
           </Form.Group>
-      </Form>
+      </Form></div>
     </div>
   )
 }

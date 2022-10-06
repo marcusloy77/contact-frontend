@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import './components/Home.css'
 import './components/App.css';
 import WebcamCapture from './components/Webcam'
 import Home from './components/Home'
