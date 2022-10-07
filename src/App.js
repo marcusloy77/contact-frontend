@@ -6,19 +6,12 @@ import Home from './components/Home'
 import ContactPage from './components/ContactPage'
 import { useState, useEffect } from 'react'
 import { Routes, Route, Link, useNavigate } from 'react-router-dom'
-//plan
-//Title, add contact, search bar
-//You contact
-//contact names, with pages for each
-//icon next to contacts?
-
-//in json we get : id, name, username, email, address, phone, website, company
 
 function App() {
 
-  const [typedSearch, setTypedSearch] = useState('')
-  const [initialContacts, setInitialContacts]= useState([])
-  const [contactList, setContacts] = useState(initialContacts)
+  const [typedSearch, setTypedSearch] = useState('') // didn't use this in the end, but left it in for possible future use
+  const [initialContacts, setInitialContacts]= useState([]) // saving the first contact list
+  const [contactList, setContacts] = useState(initialContacts) // creating a second contact list to filter, change etc
   const navigate = useNavigate()
 
   const cleanJson = (json) => {
@@ -55,13 +48,14 @@ function App() {
         contact.email.toLowerCase().includes(searchStr) || contact.phone.replace(' ', '').includes(searchStr) || 
         contact.address.city.toLowerCase().includes(searchStr) || contact.website.toLowerCase().includes(searchStr) || 
         contact.company.name.toLowerCase().includes(searchStr))
-      ) // searching through the main things people might search for, replacing spaces in phone so search works
+      ) // searching through the main things people might search for, replacing spaces in phoneNum so search works
     })
     setContacts(newContactList)
   }
 
   const toContactPage = (event) => {
-    const contact = contactList.filter(cont => (cont.id) == (event.target.className))[0]
+    
+    const contact = contactList.filter(cont => (cont.id) == (event.target.closest('.contactDivs').id))[0]
     navigate(`/${contact.username}`, {state : contact}) //passing the clicked contact into its page with usenavigate, uselocation hooks
   }
 

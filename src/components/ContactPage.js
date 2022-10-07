@@ -20,7 +20,6 @@ const ContactPage = () => {
   return (
     <div className="contactPage">
       <div className='title'><p>{contact.name}</p></div>
-
       <div className='actionBtnsContact'>
         <a className='boxBtn' href='/:username/message'><div className='box'><div className='boxIcon'><AiFillMessage size='1.5em'/></div><p className='boxWord'>Msg</p></div></a>
         <a className='boxBtn' href='/:username/call'><div className='box'><div className='boxIcon'><FaPhoneAlt size='1.5em'/></div><p className='iconWord'>Call </p></div></a>

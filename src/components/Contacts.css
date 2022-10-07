@@ -2,14 +2,44 @@
   background-color: #ff6a48;
 }
 
+.contacts {
+  display: flex;
+  flex-direction: column;
+}
+
 .contactDivs {
-  margin-top: 5%;
+  margin-top: 10px;
+  margin-bottom: 10px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 5%;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  padding-left: 2%;
   margin-left: 5%;
   margin-right: 5%;
   border-radius: 15px;
   background-color: var(--colPrimary2);
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 5fr 3fr;
+  
+}
+
+.contactText {
+  text-align: left;
+  margin-left: 3%;
+  font-size: 17px;
+}
+
+.icons {
+  text-align: right;
+  margin-right: 30%;
+  display: flex;
+}
+
+.iconMain {
+  text-align: left;
+  margin-right: 10%;
+  margin-left: 10%;
 }

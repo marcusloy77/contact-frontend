@@ -6,7 +6,7 @@ const Home = ({handleContentChange, toContactPage, contactList} ) => {
   return (
   <>
     <div className='title'>
-          <h1>Contacts</h1>
+          <p className='titleText'>Contacts</p>
           <Search handleContentChange={handleContentChange}></Search>
         </div>
         <main>
