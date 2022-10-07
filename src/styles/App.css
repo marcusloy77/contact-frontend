@@ -1,0 +1,40 @@
+.App {
+  text-align: center;
+}
+:root {
+  --colPrimary1: #BD1C4E;
+  --colPrimary2: #FFC648;
+  --colPrimary3: #FFB615;
+  --colSecondary1: white;
+  --colSecondary2: #cf8c37;
+  --colSecondary3: #141414;
+  --colBackground: #ff6a48;
+  font-family: 'roboto';
+  background-color: var(--colBackground);
+  padding-bottom: 60px;
+}
+
+a:link { text-decoration: inherit; color: inherit; }
+a:visited { text-decoration: inherit; color: inherit;}
+a:hover { text-decoration: inherit; color: inherit;}
+a:active { text-decoration: inherit; color: inherit;}
+
+.nav {
+  background-color: var(--colPrimary3);
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.nav-elem {
+  float: left;
+  color: red;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  background-color: var(--colPrimary3);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}

@@ -1,6 +1,6 @@
 import Search from './Search'
 import Contacts from './Contacts'
-import './Home.css'
+
 
 const Home = ({handleContentChange, toContactPage, contactList} ) => {
   return (

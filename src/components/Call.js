@@ -1,11 +1,12 @@
 import { FaPhoneAlt} from 'react-icons/fa'
 import { RiDeleteBack2Fill } from 'react-icons/ri'
-import './Call.css'
+import { useSearchParams } from 'react-router-dom';
 import { useState } from 'react'
 
-const Call = ({prevNum}) => {
+const Call = () => {
 
-  const [dialedNum, setDialedNum] = useState('')
+  const [searchParams] = useSearchParams()
+  const [dialedNum, setDialedNum] = useState(searchParams.get('number') || '')
 
   const dial = (event) => {
     setDialedNum(dialedNum + event.target.closest('.dialNumber').innerText)
@@ -17,6 +18,7 @@ const Call = ({prevNum}) => {
 
   return (
     <div>
+      <div className='backBtn'></div>
       <div className='dialedNumber' id='dialNum'>{dialedNum}</div>
       <div className='numberListWrapper'>
         <div className="numberList">

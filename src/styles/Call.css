@@ -29,3 +29,24 @@
   display: flex;
   justify-content: center;
 }
+.messagePage {
+  display: block;
+  justify-content: center;
+  text-align: center;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+.homeButton {
+  padding-top: 5px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  width: 92px;
+  height: 50px;
+  background-color: var(--colPrimary2);
+  border-radius: 15px;
+}

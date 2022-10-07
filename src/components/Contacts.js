@@ -1,8 +1,9 @@
-import './Contacts.css'
+
 import { FaPhoneAlt } from 'react-icons/fa'
 import { AiFillMail, AiFillMessage } from 'react-icons/ai'
 
 const Contacts = ({toContactPage, contactList}) => {
+
   return (
     <div className="contacts" >
       {contactList.map((contact, index) => {
@@ -13,7 +14,7 @@ const Contacts = ({toContactPage, contactList}) => {
               <div className='icons'>
                 <a className='iconMain' href={'mailto:' + contact.email}><AiFillMail size='1.4em'/></a>
                 <a className='iconMain' href={'/' + contact.username + '/message'}><AiFillMessage size='1.4em'/></a>
-                <a className='iconMain' href={'/' + contact.username + '/call'}><FaPhoneAlt size='1.4em'/></a>
+                <a className='iconMain' href={'/call?number=' + contact.phone}><FaPhoneAlt size='1.4em'/></a>
               </div>
             </div>
           </div>

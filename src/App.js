@@ -1,12 +1,18 @@
-import './components/Home.css'
-import './components/App.css';
+
+import './styles/App.css';
+import './styles/Call.css';
+import './styles/ContactPage.css';
+import './styles/Contacts.css';
+import './styles/Home.css'
 import WebcamCapture from './components/Webcam'
 import Home from './components/Home'
 import ContactPage from './components/ContactPage'
 import Call from './components/Call'
 import Message from './components/Message'
 import { useState, useEffect } from 'react'
-import { Routes, Route, Link, useNavigate } from 'react-router-dom'
+import { Routes, Route, useNavigate, Link } from 'react-router-dom'
+//todo : add a nav, fix the location point in the contact page
+
 
 function App() {
 
@@ -14,7 +20,8 @@ function App() {
   const [initialContacts, setInitialContacts]= useState([]) // saving the first contact list
   const [contactList, setContacts] = useState(initialContacts) // creating a second contact list to filter, change etc
   const navigate = useNavigate()
-
+  const themes = {resonate: 'App resonateTheme', dark: 'App darkTheme', light: 'App lightTheme'}
+  
   const cleanJson = (json) => {
     for (let i = 0; i < json.length; i++) {
       json[i].phone = json[i].phone.slice(0,json[i].phone.indexOf('x')) // weird x... ending to phone numbers - i assume that isn't wanted, never seen it before
@@ -55,20 +62,28 @@ function App() {
   }
 
   const toContactPage = (event) => {
-    
+    if (event.target.closest('.iconMain')) {
+      return // this is just to prevent parent propagation if an icon is clicked, probably better practice somewhere but it works, so eh
+    }
     const contact = contactList.filter(cont => (cont.id) == (event.target.closest('.contactDivs').id))[0]
     navigate(`/${contact.username}`, {state : contact}) //passing the clicked contact into its page with usenavigate, uselocation hooks
   }
 
   return (
-    <div className="App">
+    <div className={themes.resonate}>
+      
       <Routes>
         <Route path='/' element={<Home handleContentChange={handleContentChange} toContactPage={toContactPage} contactList={contactList}></Home>}></Route>
         <Route path='/:username' element={<ContactPage></ContactPage>}></Route>
-        <Route path='/:username/call' element={<Call contactList={contactList} />}></Route>
+        <Route path='/call' element={<Call/>}></Route>
         <Route path='/:username/message' element={<Message />}></Route>
         <Route path='/webcam' element={<WebcamCapture />}></Route>
       </Routes>
+      <div className='nav'>
+        <div className='nav-elem'><a href='/'><span className='nav-word'>Home</span></a></div>
+        <div className='nav-elem'><a href='/call'><span className='nav-word'>Dial</span></a></div>
+        <div className='nav-elem res-pop'><div><span className='nav-word'>Themes </span></div></div>
+      </div>
     </div>
   );
 }
