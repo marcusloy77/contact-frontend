@@ -1,0 +1,64 @@
+
+
+.contactPage {
+  max-width: 322px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+}
+
+
+
+.title {
+  font-size: 36px;
+  font-family: 'Roboto';
+  font-weight: 700;
+  margin-top: 8%;
+  margin-bottom: 2%;
+  color: var(--colSecondary3);
+}
+
+.box {
+  width: 65px;
+  height: 65px;
+  margin-right: 5px;
+  margin-left: 5px;
+  border-radius: 10px;
+  background-color: var(--colPrimary2);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  color: var(--colPrimary1);
+}
+.boxIcon {
+  padding-top: 8px;
+  color: var(--colPrimary1);
+}
+.boxText {
+  text-decoration: none !important;
+  text-decoration-line: none;
+}
+
+
+.actionBtnsContact {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 13%;
+}
+
+.contactOptions {
+  background-color: var(--colPrimary2);
+  font-weight: 450;
+  top: 50%;
+  transform: translate(0, -50%);
+  margin-bottom: 20px;
+  margin-top: auto;
+  text-align: left;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  min-height: 35px;
+  padding-left: 9%;
+}

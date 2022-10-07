@@ -1,0 +1,15 @@
+.App {
+  background-color: #ff6a48;
+}
+
+.contactDivs {
+  margin-top: 5%;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 15px;
+  background-color: var(--colPrimary2);
+}

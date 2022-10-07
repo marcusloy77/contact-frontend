@@ -8,5 +8,11 @@
   --colSecondary2: #cf8c37;
   --colSecondary3: #141414;
   font-family: 'roboto';
+  background-color: #ff6a48;
 }
+
+a:link { text-decoration: inherit; color: inherit; }
+a:visited { text-decoration: inherit; color: inherit;}
+a:hover { text-decoration: inherit; color: inherit;}
+a:active { text-decoration: inherit; color: inherit;}
 

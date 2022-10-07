@@ -61,7 +61,7 @@ function App() {
   }
 
   const toContactPage = (event) => {
-    const contact = contactList.filter(cont => cont.id == event.target.className)[0]
+    const contact = contactList.filter(cont => (cont.id) == (event.target.className))[0]
     navigate(`/${contact.username}`, {state : contact}) //passing the clicked contact into its page with usenavigate, uselocation hooks
   }
 
