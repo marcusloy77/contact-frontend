@@ -21,11 +21,11 @@ const ContactPage = () => {
     <div className="contactPage">
       <div className='title'><p>{contact.name}</p></div>
       <div className='actionBtnsContact'>
-        <a className='boxBtn' href='/:username/message'><div className='box'><div className='boxIcon'><AiFillMessage size='1.5em'/></div><p className='boxWord'>Msg</p></div></a>
-        <a className='boxBtn' href='/:username/call'><div className='box'><div className='boxIcon'><FaPhoneAlt size='1.5em'/></div><p className='iconWord'>Call </p></div></a>
+        <a className='boxBtn' href={'/' + contact.username + '/message'}><div className='box'><div className='boxIcon'><AiFillMessage size='1.5em'/></div><p className='boxWord'>Msg</p></div></a>
+        <a className='boxBtn' href={'/' + contact.username + '/call'}><div className='box'><div className='boxIcon'><FaPhoneAlt size='1.5em'/></div><p className='iconWord'>Call </p></div></a>
         <a className='boxBtn' href='/webcam'><div className='box'><div className='boxIcon'><FaVideo size='1.5em'/></div><p className='iconWord'>Vid</p></div></a>
         <a className='boxBtn' href={'mailto:' + contact.email}><div className='box'><div className='boxIcon'><AiFillMail size='1.5em'/></div><p className='iconWord'>Mail</p></div></a></div>
-        <a className='contactOptions' href='/:username/call'><div>Phone: {contact.phone}</div></a>
+        <a className='contactOptions' href={'/' + contact.username + '/call'}><div>Phone: {contact.phone}</div></a>
       <a className='contactOptions' href={'mailto:' + contact.email}><div >Email: {contact.email}</div></a>
       <a className='contactOptions' href={'https://www.google.com/search?q=' + contact.company.name.replace(' ', '+')}><div >Company: {contact.company.name}</div></a>
       <a className='contactOptions' href={'http://' + contact.website}><div >Website: {contact.website}</div></a>

@@ -1,9 +1,10 @@
-import logo from './logo.svg';
 import './components/Home.css'
 import './components/App.css';
 import WebcamCapture from './components/Webcam'
 import Home from './components/Home'
 import ContactPage from './components/ContactPage'
+import Call from './components/Call'
+import Message from './components/Message'
 import { useState, useEffect } from 'react'
 import { Routes, Route, Link, useNavigate } from 'react-router-dom'
 
@@ -64,6 +65,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home handleContentChange={handleContentChange} toContactPage={toContactPage} contactList={contactList}></Home>}></Route>
         <Route path='/:username' element={<ContactPage></ContactPage>}></Route>
+        <Route path='/:username/call' element={<Call contactList={contactList} />}></Route>
+        <Route path='/:username/message' element={<Message />}></Route>
         <Route path='/webcam' element={<WebcamCapture />}></Route>
       </Routes>
     </div>
