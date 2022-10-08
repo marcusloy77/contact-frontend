@@ -9,6 +9,7 @@ import Home from './components/Home'
 import ContactPage from './components/ContactPage'
 import Call from './components/Call'
 import Message from './components/Message'
+import Themes from './components/Themes'
 import { useState, useEffect } from 'react'
 import { Routes, Route, useNavigate, Link } from 'react-router-dom'
 //todo : add a nav, fix the location point in the contact page
@@ -78,11 +79,12 @@ function App() {
         <Route path='/call' element={<Call/>}></Route>
         <Route path='/:username/message' element={<Message />}></Route>
         <Route path='/webcam' element={<WebcamCapture />}></Route>
+        <Route path='/themes' element={<Themes></Themes>}></Route>
       </Routes>
       <div className='nav'>
         <div className='nav-elem'><a href='/'><span className='nav-word'>Home</span></a></div>
         <div className='nav-elem'><a href='/call'><span className='nav-word'>Dial</span></a></div>
-        <div className='nav-elem res-pop'><div><span className='nav-word'>Themes </span></div></div>
+        <div className='nav-elem res-pop'><a href='/themes'><span className='nav-word'>Themes </span></a></div>
       </div>
     </div>
   );
