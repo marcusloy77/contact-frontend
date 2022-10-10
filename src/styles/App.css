@@ -4,7 +4,6 @@
 }
 :root {
   font-family: 'roboto';
-  padding-bottom: 50px;
 }
 
 .resTheme {
@@ -66,7 +65,7 @@ a:active { text-decoration: inherit; color: inherit;}
   color: var(--navTextCol);
   text-align: center;
   width: 20%;
-  padding: 14px 16px;
+  padding: 1vh 16px;
   text-decoration: none;
   font-size: 17px;
   background-color: var(--colPrimary3);

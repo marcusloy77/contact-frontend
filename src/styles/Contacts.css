@@ -55,6 +55,61 @@
   padding-left: 10px;
 }
 
-@media (max-width: 800px) {
 
+@media (min-width: 550px) {
+
+  .contactDivs {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 35px;
+  }
+  .contactText {
+    font-size: 35px;
+  }
+  .icons {
+    text-align: right;
+    margin-right: 30%;
+    display: flex;
+    color: var(--textCol1);
+  }
+  .iconMain {
+    text-align: left;
+    margin-right: 10%;
+    margin-left: 0%;
+  }
+}
+@media (min-width: 850px) {
+  .titleText {
+    font-size: 56px !important;
+  }
+  .searchBarInput {
+    font-size: 30px;
+    height: 60px;
+  }
+  .contactDivs {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 40px;
+  }
+  .contactText {
+    font-size: 40px;
+  }
+  .iconMain {
+    text-align: left;
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+
+  .contacts {
+    padding-bottom: 50px;
+  }
+}
+
+@media (min-width: 1500px) { 
+  .titleText {
+    font-size: 70px !important;
+  }
+  .subTitle {
+    font-size: 40px !important;
+  }
 }
