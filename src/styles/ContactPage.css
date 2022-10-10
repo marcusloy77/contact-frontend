@@ -1,19 +1,19 @@
 
 .contactPage {
-  max-width: 322px;
+  max-width: 90vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  margin: auto;
+  margin: 0 auto;
 }
 
-.titleText {
+.title {
   font-size: 36px;
   font-family: 'Roboto';
   font-weight: 700;
   padding-top: 8%;
-  margin-bottom: 2%;
+  
   color: var(--textCol1);
 }
 
@@ -41,15 +41,13 @@
 .actionBtnsContact {
   display: flex;
   justify-content: center;
-  margin-bottom: 13%;
+  margin-bottom: 30px;
 }
 
 .contactOptions {
   background: var(--btnCol);
   font-weight: 450;
-  top: 50%;
-  transform: translate(0, -50%);
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   margin-top: auto;
   text-align: left;
   margin-left: 5%;
@@ -62,3 +60,59 @@
   color: var(--textCol1) !important;
 }
 
+@media (min-width: 720px) {
+
+  .title {
+    font-size: 50px;
+  }
+
+  .contactOptions {
+    font-size: 20px;
+  }
+
+  .box {
+    width: 90px;
+    height: 90px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .boxIcon {
+    padding-top: 12px;
+    color: var(--backgroundCol);
+    font-size: 28px;
+  }
+  .iconWord {
+    text-decoration: none !important;
+    text-decoration-line: none;
+    font-size: 20px;
+  }
+
+
+}
+
+@media (min-width: 1500px) {
+  .title {
+    font-size: 60px;
+  }
+
+  .contactOptions {
+    font-size: 30px;
+  }
+
+  .box {
+    width: 120px;
+    height: 120px;
+    margin-right: 12px;
+    margin-left: 12px;
+  }
+  .boxIcon {
+    padding-top: 15px;
+    color: var(--backgroundCol);
+    font-size: 35px;
+  }
+  .iconWord {
+    text-decoration: none !important;
+    text-decoration-line: none;
+    font-size: 25px;
+  }
+}

@@ -1,6 +1,7 @@
 .contacts {
   display: flex;
   flex-direction: column;
+  padding-bottom: 80px;
 }
 
 .contactDivs {
@@ -49,12 +50,21 @@
 
 .searchBarInput {
   height: 45px;
-  width: 70vw;
+  width: 75vw;
   font-size: 22px;
   border-radius: 10px;
   padding-left: 10px;
 }
 
+@media (max-width: 330px) {
+  .contactText {
+    font-size: 18px;
+  }
+  .iconMain {
+    margin-left: 0px;
+  }
+
+}
 
 @media (min-width: 550px) {
 
