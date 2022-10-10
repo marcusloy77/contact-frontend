@@ -1,5 +1,4 @@
 
-
 .contactPage {
   max-width: 322px;
   display: flex;
@@ -9,15 +8,13 @@
   margin: auto;
 }
 
-
-
 .title {
   font-size: 36px;
   font-family: 'Roboto';
   font-weight: 700;
-  margin-top: 8%;
+  padding-top: 8%;
   margin-bottom: 2%;
-  color: var(--colSecondary3);
+  color: var(--textCol1);
 }
 
 .box {
@@ -26,17 +23,18 @@
   margin-right: 5px;
   margin-left: 5px;
   border-radius: 10px;
-  background-color: var(--colPrimary2);
+  background: var(--btnCol);
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-  color: var(--colPrimary1);
+  color: var(--backgroundCol);
 }
 .boxIcon {
   padding-top: 8px;
-  color: var(--colPrimary1);
+  color: var(--backgroundCol);
 }
 .boxText {
   text-decoration: none !important;
   text-decoration-line: none;
+  
 }
 
 
@@ -47,7 +45,7 @@
 }
 
 .contactOptions {
-  background-color: var(--colPrimary2);
+  background: var(--btnCol);
   font-weight: 450;
   top: 50%;
   transform: translate(0, -50%);
@@ -61,4 +59,6 @@
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
   min-height: 35px;
   padding-left: 9%;
+  color: var(--textCol1) !important;
 }
+

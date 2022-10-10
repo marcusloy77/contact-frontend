@@ -1,6 +1,7 @@
 import Search from './Search'
 import Contacts from './Contacts'
 
+//responsive notes : search bar needs to get bigger with contacts
 
 const Home = ({handleContentChange, toContactPage, contactList} ) => {
   return (

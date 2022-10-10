@@ -16,7 +16,7 @@
 }
 
 .searchBarInput {
-  background-color: var(-colPrimary3) !important;
+  background-color: var(--navCol) !important;
 }
 
 .title {

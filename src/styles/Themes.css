@@ -1,0 +1,34 @@
+.themeTitle {
+  font-size: 48px;
+}
+
+.sunset {
+  background-image: linear-gradient(90deg,rgb(252, 251, 181), #BD1C4E, #fcb900, #ff4747, rgb(241, 228, 154));
+  color: white;
+  border-radius: 20px;
+}
+
+.themeOp2 {
+  background: radial-gradient(rgb(0, 0, 0), rgb(0, 0, 151));
+  color: white;
+  border-radius: 20px;
+}
+
+.themeOp3 {
+  background:linear-gradient(#ffd51a, #fefae1, #ffd51a);
+  color: black;
+  border-radius: 20px;
+}
+
+.themeBtn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 80px;
+  border-radius: 20px;
+  padding-top: 12px;
+  font-size: 36px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  border: 2px solid white;
+}

@@ -17,7 +17,7 @@ const Call = () => {
   }
 
   return (
-    <div>
+    <div className='callPage'>
       <div className='backBtn'></div>
       <div className='dialedNumber' id='dialNum'>{dialedNum}</div>
       <div className='numberListWrapper'>

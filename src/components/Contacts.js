@@ -1,6 +1,7 @@
 
 import { FaPhoneAlt } from 'react-icons/fa'
 import { AiFillMail, AiFillMessage } from 'react-icons/ai'
+import { Link } from 'react-router-dom'
 
 const Contacts = ({toContactPage, contactList}) => {
 
@@ -13,8 +14,8 @@ const Contacts = ({toContactPage, contactList}) => {
               <p className='contactText'>{contact.name}</p> 
               <div className='icons'>
                 <a className='iconMain' href={'mailto:' + contact.email}><AiFillMail size='1.4em'/></a>
-                <a className='iconMain' href={'/' + contact.username + '/message'}><AiFillMessage size='1.4em'/></a>
-                <a className='iconMain' href={'/call?number=' + contact.phone}><FaPhoneAlt size='1.4em'/></a>
+                <Link className='iconMain' to={'/' + contact.username + '/message'}><AiFillMessage size='1.4em'/></Link>
+                <Link className='iconMain' to={'/call?number=' + contact.phone}><FaPhoneAlt size='1.4em'/></Link>
               </div>
             </div>
           </div>
